@@ -1,4 +1,7 @@
 language: python
+before_install:
+  - which -a python3.7 ; python3.7 --version || true
+  - pyenv install --list | grep 3.7 || true
 dist: xenial
 before_install:
 - cd ./app
