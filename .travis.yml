@@ -9,11 +9,7 @@ install:
 script:
 - pytest
 deploy:
-  matrix:
-  - provider: heroku
-  - app: prophetdata
+- provider: heroku
   api_key:
     secure: xFqIafZivYZUvdlaxy7lbTbBPbmzBU9SOyUfWhqkcOWYlaplKXbzP7W1/QaiowlWWdk8VgKbbpU0AIjEDLOorBkUsirrN5Yv4FjvIbSfm/dFh8kY+GqF2qVU1kK08GEhFQF9srFy6jJVZBkoAS6tKdVe+6xE4PftG0Ddq8+HcRBvZ3D3aDVCXe+gLgy3j/SynwqF5iNLCtYFgcWWowXFnfmXXTm/1BPrM4oZYuOYMuY36/NfMq2usr5anDR6JJVPc88LZJb1EBJotAWiW3EBYdONcRwc0YJpktZQHDRttD7MgxdnzcfVq7rjogonuCvaEgF7ewvaA5Ap/MTmiaLvwgdQpe1P5dGgQFy7ZUb06MSfaamJ9L2pbQEZA/fA6jMXJv1t8PbD3/d7kVFSNew4LuSTwQ3/yk4F4sKqV0BroCQWow81q7O4s2NtCIodp4fPsjro0EwWlyT5FU/yMQRx7YtwLXYQxE/LzmCVH3tHMcB+lUZRwXLNOdvaWiXC6XjNZGoEzckkaFYThhNXZVnUKvqagem0MQRzE3qdVqy//YVTSaNFlhfBdqT4UJdsDE0UCIgw78B+yrlzymmg8mpnfK0aTa4mKiD8GdE3iUjCTGD8Kt/WBJpHi67u7Cyl2pUk9nFP+c8hLSYlP8SgkFnedbZaZH5lwz1Sd+F3HUtT3u8=
-notifications:
-  email:
-  - leonardonhesi@gmail.com
+  app: prophetdata
