@@ -1,3 +1,6 @@
 module.exports = {
-    'outputDir': '../app/templates/'
-  }
+  "outputDir": "../app/templates/",
+  "transpileDependencies": [
+    "vuetify"
+  ]
+}
