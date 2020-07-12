@@ -1,5 +1,7 @@
 pandas
 Flask
+Flask-Cors
+flask-socketio
 scikit-learn
 gunicorn
 pytest

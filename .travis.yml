@@ -1,8 +1,19 @@
 language: python
 dist: xenial
-before_install: 
-  - cd ./app
+before_install:
+- cd ./app
 install:
-  - pip install -r requirements.txt
+- pip install -r requirements.txt
 script:
-  - pytest
+- pytest
+deploy:
+  matrix:
+  - provider: heroku
+    api_key:
+      secure: 
+    app: prophetdata
+  api_key:
+    secure: DIKzWfG4l6xItL5kfB/CpvQDEReWeNdrBDakqCi/jE2quq2fSv/nr7pWEIdrmKWPxlbgIJsN3NHcPmBlDxEOSiCpmkI4T7kU61Ed6lM9DybVYPwJUpn5Tn4hH67V24Yx+Qlzzsed45ADgQGCEsQdMFSOnlMuzAGbhGOzqUGnpKnGvHLPeqhqO6kIFqD3vR97gORnN3AugpliA+2+1i+4aGW4wIgz8ZDRa2OH24DNkhspqw4O8jxbjQbrBPFB9wnXCM/5uh/4ieRqMmefFhDRkMQlKC5XtSWbjEwVznTJDwF/HPsBMBWVdAiICLO+yhvN2m2C8L4ytyguSwKsfq2cXQnQFPA7twJW9qVxAoC9blCBhu2lhGWdP6npeYA6cQPURgs2Ew8Q1baKubsaEBEultBCIwPCU7NSiNIB2f/P+2sf/oDDmf6ZgicJ7I81KZ8dew1TSe1kltGufp7RMdzBIUqNPbczSzVaen6zV6W4odHpR7p421bTIkcE/uKsHS5tM6OofymktYomLXtujvTVWkwUCZQOz3r4m/I+d32NJlZLTX7X3lHku26a2q4676pkcqDG3c4SDX1LFyYmhxdOXPvzunlIWh66BAU3lmYXKl3CavHR8Er7T70he+ZyOCM4XLLCfAqtGNV8sU0553pQX2ZywR+fQeSo3zV82n/DsiY=
+notifications:
+  email:
+  - leonardonhesi@gmail.com
