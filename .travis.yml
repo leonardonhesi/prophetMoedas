@@ -12,7 +12,7 @@ deploy:
   provider: heroku
   api_key:
     secure: DH/GtAJU7hw7rw/CuDCHfhz0FBut2khOyhjlqdUMfE0ruxORGjHzZkNde0pKfxp7Y2Do61Ol1qn1bLwuPX8y/mr+mkSJ2mJSttlvPBRhHlZq8cYfq+b1R2bLpfG/g4tRyW9wSVRtf+bpF37oDx+imXO9z3w+cr5DV2QFTcLsLkZKq92T2bZ4mC5S/jn/dXTYCbQF6yUzJ5PQ03tq1pWOC3dl5xgufuwMl9Pqj+xET7kiNCzEBzOiMbfeIovIbTYgIMWOMv8wQSQnF9vNPK9e80nuklovt6Fz/IjwfWr3Jppqw702iCA8RI6/eS3WTm+cnRAlMeKiCK9aIgI6w2IqAELAWF37ViKC1H4WUP3qDJ22JP/xKTzlI2iDU35Hr7b7xGjHAcPpDY4K/ZBEQKtc9vVsd8FEPaYreziquH1BNrWLLzHtN96IN6qWbjp428pQUSV44jrYicK8QDDGpwuy5b162Nn8+YTzWLKRkNJmBMGLfJkfS0PXkDIi1YN933I6lber7BweVIuLh4zmGoxGns2zQCNIHWUru69B+8CuaS80PPFp4y7ftxQghwrIZu68fQREsTFykFbyms67NjKL3TQARaIQQovjJcfpjVKdU928XtsWY+1sZfVeUl2C0nF0DxlsX4pDmHAZPPP9zEa9fvtS5eJf0gPaqO7kXT8PW98=
-  app: prophetMoedas
+  app: prophetdata
   on:
     repo: leonardonhesi/prophetMoedas
   skip_cleanup: 'true'
