@@ -1,5 +1,6 @@
-from flask      import Flask, render_template, jsonify
-from flask_cors import CORS
+from flask         import Flask, render_template, jsonify
+from flask_cors    import CORS
+import os
 
 app = Flask(__name__, 
             static_url_path='',
@@ -9,6 +10,12 @@ app = Flask(__name__,
 app.config.from_object(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
 
+if (os.name != 'nt'):
+   from flask_crontab import Crontab
+   crontab = Crontab(app)
+   @crontab.job(minute= "*/10", hour= "*", day= "*", month= "*", day_of_week= "*")
+   def atualizaDados():
+      print('vou atualizar')
 
 @app.route('/', methods=['GET'])
 def Homepage():

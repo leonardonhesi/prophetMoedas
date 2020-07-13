@@ -3,6 +3,7 @@ numpy
 Flask
 Flask-Cors
 flask-socketio
+flask-crontab
 scikit-learn
 gunicorn
 pytest
