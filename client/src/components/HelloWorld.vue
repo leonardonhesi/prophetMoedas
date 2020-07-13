@@ -96,18 +96,10 @@
     name: 'HelloWorld',
     mounted: function () {
       this.$nextTick(function () {
-        this.sockets.subscribe('SOCKET_UPD', (data) => {
+        this.sockets.listener.subscribe('SOCKET_UPD', (data) => {
           this.dataFromapi = data;
         })     
       })
-    },
-    sockets: {
-        connect: function () {
-            console.log('socket connected')
-        },
-        customEmit: function (data) {
-            console.log('this method was fired by the socket server. eg: io.emit("customEmit", data)')
-        }
     },
     data: () => ({
       dataFromapi: '',
