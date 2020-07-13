@@ -6,11 +6,11 @@ import store from './store'
 import vuetify from './plugins/vuetify';
 import VueSocketIO from 'vue-socket.io'
 import SocketIO from "socket.io-client"
-
+//  connection: SocketIO('http://127.0.0.1:5000'),
 Vue.config.productionTip = false
 
 Vue.use(new VueSocketIO({
-  debug: true,
+  debug: false,
   connection: SocketIO('https://prophetdata.herokuapp.com'),
   vuex: {
       store,

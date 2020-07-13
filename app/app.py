@@ -18,9 +18,9 @@ def test_connect():
     emit('SOCKET_UPD',  {'data':'Conectado'})
 
 def scheduledo():
-    emit('SOCKET_UPD',  {'data': time.strftime("%A, %d. %B %Y %I:%M:%S %p")})
+    socketio.emit('SOCKET_UPD',  {'data': time.strftime("%A, %d. %B %Y %I:%M:%S %p")})
 sched = BackgroundScheduler(daemon=True)
-sched.add_job(func=scheduledo, trigger="interval", minutes=3)
+sched.add_job(scheduledo, "interval", minutes=1)
 sched.start()
 
 @app.route('/', methods=['GET'])
