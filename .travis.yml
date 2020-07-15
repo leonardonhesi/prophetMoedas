@@ -6,6 +6,9 @@ before_install:
 - cd ./app
 install:
 - pip install -r requirements.txt
+- cd ./client
+- npm run build
+- cd ./app
 script:
 - pytest
 deploy:
