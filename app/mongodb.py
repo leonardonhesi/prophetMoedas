@@ -1,5 +1,6 @@
 import pandas   as pd
 import pymongo
+import os
 from pymongo    import MongoClient
 
 client = MongoClient(os.environ['MONGO_ACCESS'])
