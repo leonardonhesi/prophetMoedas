@@ -2,7 +2,7 @@ import pandas   as pd
 import pymongo
 from pymongo    import MongoClient
 
-client = MongoClient("mongodb://moedas:mo3d4s@ds035603.mlab.com:35603/moedas?retryWrites=false")
+client = MongoClient(os.environ['MONGO_ACCESS'])
 db     = client['moedas']
 
 def saveData(df, colection='dolar'):
