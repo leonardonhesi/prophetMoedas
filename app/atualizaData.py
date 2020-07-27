@@ -83,6 +83,6 @@ def lme():
 def geral():
     df_dolar  = get(Datafrom='dolar')
     df_lme    = get(Datafrom='geral')
-    result    = df_dolar.join(df_lme, how='outer')
+    result    = df_dolar.join(df_lme, how='outer', lsuffix='_dolar', rsuffix='_lme')
     saveData(result, colection='geral')
     return True
