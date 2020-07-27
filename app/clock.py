@@ -4,7 +4,7 @@ from app                               import socketio
 from apscheduler.schedulers.background import BackgroundScheduler
 
 sched = BackgroundScheduler(daemon=True)
-@sched.scheduled_job('interval', minutes=30)
+@sched.scheduled_job('interval', minutes=1)
 def scheduledo():
     dolar()
     lme()
