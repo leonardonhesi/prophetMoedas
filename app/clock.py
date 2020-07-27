@@ -1,8 +1,8 @@
 import time
 from atualizaData                      import dolar, lme, geral
-from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.schedulers.blocking import BlockingScheduler
 
-sched = BackgroundScheduler(daemon=True)
+sched = BlockingScheduler()
 @sched.scheduled_job('interval', minutes=30)
 def scheduledo():
     dolar()
